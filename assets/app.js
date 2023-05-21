@@ -27,41 +27,39 @@ function calculateSalary(level) {
   }
   const salary = Math.floor(Math.random() * (max - min + 1)) + min;
   const netSalary = salary * (1 - 0.075); // 7.5% tax
-  return netSalary;
-}
-
-function renderEmployee(employee) {
-  const employeeContainer = document.getElementById('employee-container');
-
-  const employeeCard = document.createElement('div');
-  employeeCard.classList.add('employee-card');
-
-  const employeeId = document.createElement('p');
-  employeeId.textContent = `Employee ID: ${employee.id}`;
-  employeeCard.appendChild(employeeId);
-
-  const employeeName = document.createElement('p');
-  employeeName.textContent = `Employee name: ${employee.fullName}`;
-  employeeCard.appendChild(employeeName);
-
-  const employeeLevel = document.createElement('p');
-  employeeLevel.textContent = `Employee level: ${employee.level}`;
-  employeeCard.appendChild(employeeLevel);
-
-  const employeeDepartment = document.createElement('p');
-  employeeDepartment.textContent = `Employee department: ${employee.department}`;
-  employeeCard.appendChild(employeeDepartment);
-
-  const employeeSalary = document.createElement('p');
-  employeeSalary.textContent = `Employee salary: ${employee.salary.toFixed(0)}`;
-  employeeCard.appendChild(employeeSalary);
-
-  const employeeImage = document.createElement('img');
-  employeeImage.src = employee.imageURL;
-  employeeImage.alt = employee.fullName;
-  employeeImage.classList.add('employee-image');
-  employeeCard.appendChild(employeeImage);
-
+  return netSalary; }
+  function renderEmployee(employee) {
+    const employeeContainer = document.getElementById('employee-container');
+  
+    const employeeCard = document.createElement('div');
+    employeeCard.classList.add('employee-card');
+  
+    const employeeId = document.createElement('p');
+    employeeId.textContent = `Employee ID: ${employee.id}`;
+    employeeCard.appendChild(employeeId);
+  
+    const employeeName = document.createElement('p');
+    employeeName.textContent = `Employee name: ${employee.fullName}`;
+    employeeCard.appendChild(employeeName);
+  
+    const employeeLevel = document.createElement('p');
+    employeeLevel.textContent = `Employee level: ${employee.level}`;
+    employeeCard.appendChild(employeeLevel);
+  
+    const employeeDepartment = document.createElement('p');
+    employeeDepartment.textContent = `Employee department: ${employee.department}`;
+    employeeCard.appendChild(employeeDepartment);
+  
+    const employeeSalary = document.createElement('p');
+    employeeSalary.textContent = `Employee salary: ${employee.salary.toFixed(0)}`;
+    employeeCard.appendChild(employeeSalary);
+  
+    const employeeImage = document.createElement('img');
+    employeeImage.src = employee.imageURL;
+    employeeImage.alt = employee.fullName;
+    employeeImage.classList.add('employee-image');
+    employeeCard.appendChild(employeeImage);
+    
   employeeContainer.appendChild(employeeCard);
 }
 
